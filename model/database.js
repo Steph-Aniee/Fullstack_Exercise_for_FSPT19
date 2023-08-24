@@ -9,10 +9,10 @@ const DB_NAME = process.env.DB_NAME;
 const DB_PORT = process.env.DB_PORT;
 
 const con = mysql.createConnection({
-  host: DB_HOST || "containers-us-west-47.railway.app",
+  host: DB_HOST || "localhost",
   user: DB_USER || "root",
   password: DB_PASS,
-  database: DB_NAME || "railway",
+  database: DB_NAME || "movies",
   port: DB_PORT,
   multipleStatements: true,
 });
@@ -24,7 +24,7 @@ con.connect(function (err) {
   let sql = fs.readFileSync(__dirname + "/init_db.sql").toString();
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Table creation `profiles` & `favourites` was successful!");
+    console.log("Table creation `ratings` was successful!");
 
     console.log("Closing...");
   });
