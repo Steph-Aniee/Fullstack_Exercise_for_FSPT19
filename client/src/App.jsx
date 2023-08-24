@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import MovieCard from "../components/movieCard";
 import MovieForm from "../components/movieForm";

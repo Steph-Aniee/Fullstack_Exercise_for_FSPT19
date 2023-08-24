@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import star from "../src/assets/star.png";
 
 const MovieCard = () => {
