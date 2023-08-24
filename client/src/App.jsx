@@ -4,12 +4,10 @@ import MovieCard from "../components/movieCard";
 import MovieForm from "../components/movieForm";
 
 function App() {
-  const [movieAdded, setMovieAdded] = useState(false);
-
   return (
     <>
-      <MovieForm setMovieAdded={setMovieAdded} />
-      <MovieCard movieAdded={movieAdded} setMovieAdded={setMovieAdded} />
+      <MovieForm />
+      <MovieCard />
     </>
   );
 }
