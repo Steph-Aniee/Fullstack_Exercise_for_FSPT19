@@ -1,6 +1,21 @@
 import React, { useState, useEffect } from "react";
 
-export default function movieForm() {
+export default function MovieForm({ setMovies }) {
+  const [movieData, setMovieData] = useState({
+    movie_name: "",
+    image: "",
+    rating: "",
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setMovieData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <h1> Rate a Movie </h1>

@@ -1,13 +1,15 @@
-import React from "react";
+import { React, useState } from "react";
 import "./App.css";
-import MovieCard from "../components/movieCard";
-import MovieForm from "../components/movieForm";
+import MovieCard from "./components/MovieCard";
+import MovieForm from "./components/MovieForm";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+
   return (
     <>
-      <MovieForm />
-      <MovieCard />
+      <MovieForm setMovies={setMovies} />
+      <MovieCard movies={movies} setMovies={setMovies} />
     </>
   );
 }
